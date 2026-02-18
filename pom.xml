@@ -3,9 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.skill4</groupId>
-  <artifactId>spring-di-skill4</artifactId>
+  <groupId>com.skill5</groupId>
+  <artifactId>spring-autowired-skill5</artifactId>
   <version>1.0.0</version>
+  <name>spring-autowired-skill5</name>
 
   <properties>
     <maven.compiler.source>17</maven.compiler.source>
@@ -14,30 +15,27 @@
   </properties>
 
   <dependencies>
-    <!-- Spring Core / Context (NO Spring Boot) -->
     <dependency>
       <groupId>org.springframework</groupId>
       <artifactId>spring-context</artifactId>
-      <version>6.1.12</version>
-    </dependency>
-
-    <!-- For clean console logging -->
-    <dependency>
-      <groupId>org.slf4j</groupId>
-      <artifactId>slf4j-simple</artifactId>
-      <version>2.0.13</version>
+      <version>5.3.39</version>
     </dependency>
   </dependencies>
 
   <build>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+      </plugin>
+
+      <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>exec-maven-plugin</artifactId>
         <version>3.3.0</version>
         <configuration>
-          <!-- default run -->
-          <mainClass>com.skill4.di.XmlMain</mainClass>
+          <mainClass>com.skill5.autowire.Skill5Main</mainClass>
         </configuration>
       </plugin>
     </plugins>
